@@ -28,12 +28,12 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+<script src="https://use.fontawesome.com/4945cee666.js"></script>
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
-<div id="toptop"></div>
 
 <div class="wrapper">
 <div id="top-head">

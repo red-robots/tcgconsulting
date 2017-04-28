@@ -12,43 +12,20 @@ jQuery(document).ready(function ($) {
         	$(this).addClass("active");
         	}
     		});
-	
-	
+
+    /*
+     *
+     *	Flexslider
+     *
+     ------------------------------------*/
+    $('.flexslider').flexslider({
+        animation: "slide",
+    }); // end register flexslider
+
+
 // Equal heights divs
   $('.blocks').matchHeight();
-	
-	
-	
-	
-$('.main-navigation li.program-strategy').hover(
-function(){
-	$('.banner').hide();
-	$('#program-strategy').show();
-}, 
-function(){
-  $('.banner').hide();
-	$('#default').show();
-});
 
-$('.main-navigation li.sourcing').hover(
-function(){
-  	$('.banner').hide();
-	$('#sourcing').show();
-}, 
-function(){
-  $('.banner').hide();
-	$('#default').show();
-});
-
-$('.main-navigation li.program-management').hover(
-function(){
-  	$('.banner').hide();
-	$('#program-management').show();
-}, 
-function(){
-  $('.banner').hide();
-	$('#default').show();
-});
 
 // Or with active nav toggles
 

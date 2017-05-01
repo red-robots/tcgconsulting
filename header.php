@@ -54,7 +54,7 @@
 </form>
             </div><!-- topsearch -->
         </div><!-- top head right -->
-        
+<div class="clear"></div>
 </div><!-- top head -->
 </div><!-- wrapper -->
 

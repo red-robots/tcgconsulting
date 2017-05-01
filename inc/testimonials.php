@@ -24,7 +24,7 @@
 					- <?php the_field('testimonial_credits'); ?>
 				</div><!-- testi cite -->
 			</div><!-- testimonial -->
-
 		<?php endwhile; ?>
-	<?php endif; ?>
+	    <?php wp_reset_postdata();
+	endif; ?>
 </div><!-- testimonials -->

@@ -656,6 +656,15 @@ ul.offices li a.active {
 }
 /* 		Header
 ___________________________________ */
+input.top-search-field {
+    display: inline-block;
+}
+.top-head-right {
+    text-align: center;
+}
+#topsearch {
+    margin: 10px 0 0 0;
+}
 #top-head {
 	margin: 20px 0 0 0;	
 }
@@ -707,26 +716,12 @@ box-shadow: 0px 4px 10px -1px rgba(77,75,77,1);
 		
 }
 .top-nav ul.sub-menu {
-	display: none;
-	margin: 0px 0 0 0 ;
-	padding: 3px 5px 10px 5px;
-	position: absolute;
-	top: 100%;
-	z-index: 1000;
-	width: 200px;
-	overflow: hidden;
-	background-color: rgba(255,255,255,.8);
-}
-.top-nav ul li:hover > ul {
-		border-left: 0;
-		display: block;
+	display: block;
+	margin: 0;
 }
 .top-nav ul ul li {
-	border-right: 0px;	
-	padding: 5px 0 5px 0;
 	width: 100%;
-	float: left;
-	text-align: left;
+	text-align: center;
 }
 /* = Navigation
 -------------------------------------------------------------- */
@@ -1633,16 +1628,40 @@ ___________________________________ */
 	float: left;
 }
 .top-head-right {
-	width: 400px;
+	width: 550px;
 	float: right;
-	margin: 10px 20px 0 0;
+	margin: 10px 20px 10px 0;
 	position: relative;
 	z-index:999;
 }
+
+    .top-nav ul.sub-menu {
+        display: none;
+        margin: 0px 0 0 0 ;
+        padding: 3px 5px 10px 5px;
+        position: absolute;
+        top: 100%;
+        z-index: 1000;
+        width: 200px;
+        overflow: hidden;
+        background-color: rgba(255,255,255,.8);
+    }
+    .top-nav ul li:hover > ul {
+        border-left: 0;
+        display: block;
+    }
+    .top-nav ul ul li {
+        border-right: 0px;
+        padding: 5px 0 5px 0;
+        width: 100%;
+        float: left;
+        text-align: left;
+    }
 .top-nav {
 	text-align: right;
 	width: auto;
-	margin: 0 0 10px 0;
+	margin: 5px 0 0 0;
+    float: left;
 }
 .top-nav li {
 	width: auto;
@@ -1658,10 +1677,27 @@ ___________________________________ */
 .top-nav li.last a {
 	padding-right: 0px;
 }
-input.top-search-field {
-	float: right;	
+#topsearch {
+    float: right;
+    margin-top: 0;
 }
+input.top-search-field {
+    background-color: lightgrey;
+}
+    input.top-search-field::-moz-placeholder {
+        color: black;
+    }
+    input.top-search-field:-ms-input-placeholder {
+        color: black;
 
+    }
+    input.top-search-field:-moz-placeholder {
+        color: black;
+
+    }
+    input.top-search-field::-webkit-input-placeholder {
+        color: black;
+    }
 	.site, .wrapper {
 		margin: 0 auto;
 	}

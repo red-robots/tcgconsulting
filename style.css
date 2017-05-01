@@ -903,11 +903,11 @@ section[role="banner"] {
     align-items: center;
     align-content: center;
     flex-direction: column;
-    padding: 0 10px;
+    padding: 10px 0;
+    text-align: center;
 }
 #colophon .col-1 {
     width: 100%;
-    text-align: center;
 }
 #colophon .col-2 {
     width: 100%;
@@ -917,6 +917,47 @@ section[role="banner"] {
 }
 #colophon .col-4 {
     width: 100%;
+}
+
+#colophon .col-1 .inner-wrapper h3 {
+    font-size: 18px;
+}
+#colophon .col-1 .inner-wrapper h3 span.big{
+    font-size: 25px;
+}
+#colophon .col-2 .phone {
+    margin-top: 20px;
+}
+#colophon .col-3 .inner-wrapper .link {
+    margin-top: 10px;
+}
+#colophon .col-3 .inner-wrapper .link a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+#colophon .col-4 .inner-wrapper {
+    width: 100%;
+}
+#colophon .col-4 .inner-wrapper ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#colophon .col-4 .inner-wrapper ul li {
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 5%;
+}
+#colophon .col-4 .inner-wrapper ul li:first-child {
+    margin-left: 0;
+}
+#colophon .col-4 .inner-wrapper ul li a {
+    color: white;
+    text-decoration: none;
 }
 footer {
 	font-family: 'Roboto', sans-serif;
@@ -2016,6 +2057,10 @@ right: 0;
 
     #colophon {
         flex-direction: row;
+    }
+    #colophon .col {
+        padding: 0 10px;
+        text-align: left;
     }
     #colophon .col-1 {
         width: 20%;

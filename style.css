@@ -901,7 +901,7 @@ section[role="banner"] {
     align-content: stretch;
     flex-direction: column;
 }
-#colophon.col {
+#colophon .col {
     flex: 0 1 auto;
     display: flex;
     justify-content: center;
@@ -988,6 +988,11 @@ footer {
 	width: 100%;
     padding: 20px;
     box-sizing: border-box;
+}
+#testimonials img.mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
 }
 .testimonial {
 	font-size: 14px;
@@ -1354,6 +1359,7 @@ footer.entry-meta {
 .home .flexslider .slide {
     background-position: center;
     background-size: cover;
+    display: none;
 }
 .home .flexslider .banner-1 .inner-wrapper {
     padding: 12% 0;
@@ -1841,13 +1847,11 @@ ___________________________________ */
 .top-nav li {
 	width: auto;
 	display: inline-block;
-	border-right: 1px solid #1F396C;
 }
 .top-nav li a {
 	padding: 0 10px 0 10px;
 }
 .top-nav li.last {
-	border-right: 0px solid #1F396C;
 }
 .top-nav li.last a {
 	padding-right: 0px;
@@ -2282,8 +2286,9 @@ right: 0;
     }
 
 .footerimage {
-	background-image: url(images/footer.png);
-	background-position:top right;
+	background-image: url(images/footer.jpg);
+	background-position: center;
+    background-size: cover;
 	background-repeat: no-repeat;	
 }
 .credits {
@@ -2303,7 +2308,11 @@ right: 0;
 #testimonials {
 	position: relative;
 	padding: 5%;
+    color: black;
 }
+    #testimonials img.mobile {
+        display: none;
+    }
 .testimonial {
     width: 60%;
     margin: 0 auto 0 0;

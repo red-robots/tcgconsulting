@@ -8,7 +8,5 @@ get_header();
 get_template_part('inc/banner');
 //show boxes
 get_template_part('inc/homelinks');
-//show testimonials
-get_template_part('inc/testimonials');
 // Get the footer
 get_footer(); 

@@ -63,17 +63,18 @@ if($case_studies_story_2) $case_studies_posts[] = $case_studies_story_2; ?>
 				<?php endif; ?>
 				<?php
 				$wp_query = new WP_Query();
-				$wp_query->query( array(
-					'post_type'      => 'post',
-					'posts_per_page' => 2,
-				) );
+				$wp_query->query(array(
+					'post_type'=>'testimonial',
+					'posts_per_page' => 1,
+					'orderby' => 'rand'
+				));
 				if ( $wp_query->have_posts() ) : ?>
-                    <ul class="items">
+                    <div class="feed-test">
 						<?php while ( $wp_query->have_posts() ) : ?>
 							<?php $wp_query->the_post(); ?>
-                            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                            <a href="<?php the_permalink(); ?>"><?php the_field('testimonial'); ?></a>
 						<?php endwhile; ?>
-                    </ul><!--.items-->
+                    </div><!--.items-->
 					<?php wp_reset_postdata();
 				endif; ?>
 

@@ -21,6 +21,7 @@ jQuery(document).ready(function ($) {
     $('.flexslider').flexslider({
         animation: "slide",
         smoothHeight: true,
+        slideshowSpeed: 5000,
     }); // end register flexslider
 
 

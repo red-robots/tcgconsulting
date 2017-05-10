@@ -2125,7 +2125,7 @@ right: 0;
     }
     .home .flexslider .slide .inner-wrapper {
         position: relative;
-        padding-bottom: 35%;
+        padding-bottom:70%;
     }
     .home .flexslider .slide .inner-wrapper img {
         display: none;
@@ -2135,8 +2135,10 @@ right: 0;
         width: 100%;
         top: 30%;
         left: 0;
-        padding: 1% 5% 2% 5%;
+        padding: 1% 30% 1% 5%;
         background-color: rgba(255,255,255,0.5);
+		font-sizE: 25px;
+		line-height: 1.5;
     }
     .home .flexslider .banner-2 .inner-wrapper .text{
         position: absolute;
@@ -2145,6 +2147,8 @@ right: 0;
         left: 0;
         padding: 1% 0 1% 3%;
         color: white;
+		font-size: 25px;
+		line-height: 1.5;
     }
 .banner-text {
 	width: 55%;
@@ -2363,7 +2367,9 @@ right: 0;
 }
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
-
+	.home .flexslider .slide .inner-wrapper {
+        padding-bottom: 35%;
+    }
     .homefeed {
         justify-content: space-between;
         flex-direction: row;
@@ -2422,7 +2428,7 @@ right: 0;
 		position: relative;
 	}
 	.main-navigation li {
-		font-size: 22px;
+		font-size: 23px;
 		/*float:left;*/
 		text-align: center;
 		margin: 0 0 0 -4px;

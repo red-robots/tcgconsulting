@@ -53,15 +53,19 @@ if($case_studies_story_2) $case_studies_posts[] = $case_studies_story_2; ?>
     </div><!--.col-1-->
     <div class="col-2 col">
         <div class="outer-wrapper">
-			<?php if ( $our_clients_image ): ?>
+			<?php 
+            if ( $our_clients_image ): ?>
                 <img src="<?php echo $our_clients_image['sizes']['large']; ?>"
-                     alt="<?php $our_clients_image['alt']; ?>">
+                     alt="<?php echo $our_clients_image['alt']; ?>">
 			<?php endif; ?>
             <div class="inner-wrapper">
 				<?php if ( $our_clients_text ): ?>
                     <h2><?php echo $our_clients_text; ?></h2>
 				<?php endif; ?>
-				<?php
+				<?php $post = get_post(3201);
+                setup_postdata( $post );
+                $link = get_the_permalink( );
+                wp_reset_postdata();
 				$wp_query = new WP_Query();
 				$wp_query->query(array(
 					'post_type'=>'testimonial',
@@ -72,7 +76,7 @@ if($case_studies_story_2) $case_studies_posts[] = $case_studies_story_2; ?>
                     <div class="feed-test">
 						<?php while ( $wp_query->have_posts() ) : ?>
 							<?php $wp_query->the_post(); ?>
-                            <a href="<?php the_permalink(); ?>"><?php the_field('testimonial'); ?></a>
+                            <a href="<?php echo $link;?>"><?php the_field('testimonial'); ?></a>
 						<?php endwhile; ?>
                     </div><!--.items-->
 					<?php wp_reset_postdata();

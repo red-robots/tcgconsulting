@@ -11,7 +11,7 @@
 		wp_register_script(
 			'custom',
 			get_bloginfo('template_directory') . '/js/custom.js',
-			array('jquery'), '1.0' , true );
+			array('jquery','flexslider','blocks','isotope','images-loaded'), '1.0' , true );
 		wp_enqueue_script('custom');
 		
 		
@@ -29,6 +29,17 @@
       array('jquery') , '1.0' , true );
     wp_enqueue_script('blocks');
 		
+    wp_register_script(
+      'isotope',
+      get_bloginfo('template_directory') . '/js/isotope.js',
+      array('jquery') , '1.0' , true );
+    wp_enqueue_script('isotope');	
+
+    wp_register_script(
+      'images-loaded',
+      get_bloginfo('template_directory') . '/js/images-loaded.js',
+      array('jquery') , '1.0' , true );
+    wp_enqueue_script('images-loaded');
 		// Add more
 		
 		

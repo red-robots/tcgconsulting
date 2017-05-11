@@ -12,6 +12,20 @@ jQuery(document).ready(function ($) {
         	$(this).addClass("active");
         	}
     		});
+    /*
+	*
+	*	Isotope with Images Loaded
+	*
+	------------------------------------*/
+	var $container = $('#container').imagesLoaded( function() {
+  	$container.isotope({
+    // options
+	 itemSelector: '.item',
+		  masonry: {
+			gutter: 0
+			}
+ 		 });
+	});
 
     /*
      *

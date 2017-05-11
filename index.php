@@ -6,6 +6,8 @@
 get_header(); 
 // Get the banner
 get_template_part('inc/banner');
+// Get the programs
+get_template_part('inc/programs');
 //show boxes
 get_template_part('inc/homelinks');
 // Get the footer

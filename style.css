@@ -1322,6 +1322,34 @@ footer.entry-meta {
 	color: #757575;
 	font-weight: normal;
 }
+.template-testimonials#primary {
+	width: 100%;
+	float: none;
+}
+.template-testimonials .entry-content {
+	margin-bottom: 24px;
+}
+.template-testimonials #container {
+	width: 100%;
+	display: block;
+}
+.template-testimonials #container *{
+	box-sizing: border-box;
+}
+.template-testimonials #container .item {
+	width: 100%;
+} 
+.template-testimonials #container .item >.inner-wrapper {
+	background-color: #213C6E;
+	color: white;
+	padding: 20px;
+	font-size: 18px;
+	line-height: 1.714285714;
+	border-radius: 10px;
+}
+.template-testimonials #container .item >.inner-wrapper .testi-cite {
+	font-size: 16px;
+}
 .home .flexslider {
     position: relative;
     background-color: #e6e7e8;
@@ -2228,6 +2256,12 @@ right: 0;
 	display: inline-block;
 	margin: 10px;
 }
+
+.template-testimonials #container .item {
+	width: 33.33%;
+	min-width: 300px;
+	padding: 10px;
+} 
 /* programs*/
 .homeprograms {
 	padding: 0;

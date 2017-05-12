@@ -1417,6 +1417,7 @@ footer.entry-meta {
 	background-size: cover;
 	padding: 20px;
 	text-align: center;
+	position: relative;
 }
 .homeprograms >.row-1 {
 	padding: 20px 0;
@@ -1432,13 +1433,15 @@ footer.entry-meta {
 .homeprograms >.row-1 .instructions{
 	font-size: 18px;
 }
-
+.homeprograms >.row-2 {
+}
 .homeprograms >.row-2 .col {
 	display: block;
 	width: 100%;
+	position: relative;
 }
 .homeprograms >.row-2 .col img {
-	width: 40%;
+	width: 80%;
 	display: block;
 	margin: 0 auto;
 }
@@ -1446,7 +1449,10 @@ footer.entry-meta {
 	display: none;
 }
 .homeprograms >.row-2 .col .copy {
-	display: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 16px;
 }
 .homeprograms >.row-3 {
 	padding: 20px 0;
@@ -1888,6 +1894,11 @@ img#wpstats {
         background-image: none !important;
     }
 }
+@media screen and (min-width: 350px) {
+	.homeprograms >.row-2 .col img {
+		width: 40%;
+	}
+}
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 600px) {
 /* 		Header
@@ -2270,6 +2281,7 @@ right: 0;
 	padding: 3% 0 6% 0;
 	text-align: center;
 	color: white;
+	opacity: 0;
 }
 .homeprograms >.row-1 .title {
 	font-size: 40px;
@@ -2284,6 +2296,7 @@ right: 0;
 	width: 11%;
 	position: relative;
 	margin: 0 2.5% 0 0;
+	opacity: 0;
 }
 .homeprograms >.row-2 .col .management {
 	margin-right: 0;
@@ -2292,6 +2305,26 @@ right: 0;
 	width: 100%;
 	display: block;
 }
+
+.homeprograms >.row-2 .col .copy {
+	display: none;
+	position: absolute;
+	top: -20px;
+	left: -50px;
+	background-color: white;
+	color: black;
+	padding: 20px;
+	width: 200px;
+	z-index: 2;
+	box-shadow: 2px 2px 5px black;
+}
+.homeprograms >.row-2 .col.management .copy {
+	left: unset;
+	right: 0;
+}
+.homeprograms >.row-2 .col.strategy .copy {
+	left: 0;
+}
 .homeprograms >.row-2 .col .connector {
 	width: 100%;
 	display: block;
@@ -2299,6 +2332,7 @@ right: 0;
 	top: 50%;
 	left: 50%;
 	border: 1px solid white;
+	z-index: 1;
 }
 .homeprograms >.row-2 .col.strategy .connector{
 	left: 87%;
@@ -2330,6 +2364,7 @@ right: 0;
 	color: white;
 	margin: 0 auto;
 	width: 80%;
+	opacity: 0;
 }
 .homeprograms >.row-3 .description{
 	font-size: 35px;

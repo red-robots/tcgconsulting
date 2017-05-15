@@ -75,17 +75,17 @@ jQuery(document).ready(function ($) {
 			left: "45%",
 		});
 		$strategy.css({
-			left: "39%"
+			left: "34%"
 		});
 		$management.css({
-			left: "49%"
+			left: "51%"
 		});
 		$integration.css({
 			top: "5%",
 			left: "10%"
 		});
 		$air.css({
-			top: "80%",
+			top: "70%",
 			left: "15%"
 		});
 		$lodging.css({
@@ -112,12 +112,12 @@ jQuery(document).ready(function ($) {
 		tl_integration.seek(2.5);
 		
 		var tl_air = new TimelineMax({repeat:-1});
-		tl_air.to($air, 5, {bezier:[{x:homeprograms_width*.40, y:-homeprograms_height*.40}, {x:homeprograms_width*.50, y:-homeprograms_height*.7}, {x:homeprograms_width*.4, y:-homeprograms_height*.7}, {x:"0", y:"0"}], ease:Linear.easeNone},0);
+		tl_air.to($air, 5, {bezier:[{x:homeprograms_width*.40, y:-homeprograms_height*.40}, {x:homeprograms_width*.50, y:-homeprograms_height*.6}, {x:homeprograms_width*.4, y:-homeprograms_height*.6}, {x:"0", y:"0"}], ease:Linear.easeNone},0);
 		tl_air.to($air, 1.25, {scaleX:1.5,scaleY:1.5, ease:Linear.easeNone},0);
 		tl_air.to($air, 2.5, {scaleX:0.75,scaleY:0.75, ease:Linear.easeNone, yoyo: true},1.25);
 		tl_air.to($air, 1.25, {scaleX:1,scaleY:1, ease:Linear.easeNone},3.75);
 		tl_air.seek(2.5);
-		
+
 		var tl_lodging = new TimelineMax({repeat:-1});
 		tl_lodging.to($lodging, 5, {bezier:[{x:-homeprograms_width*.60, y:homeprograms_height*.05}, {x:-homeprograms_width*.70, y:homeprograms_height*.30}, {x:-homeprograms_width*.5, y:homeprograms_height*.40}, {x:"0", y:"0"}], ease:Linear.easeNone},0);
 		tl_lodging.to($lodging, 1.25, {scaleX:1.5,scaleY:1.5, ease:Linear.easeNone},0);
@@ -126,7 +126,7 @@ jQuery(document).ready(function ($) {
 		tl_lodging.seek(4);
 
 		var tl_meetings = new TimelineMax({repeat:-1});
-		tl_meetings.to($meetings, 5, {bezier:[{x:-homeprograms_width*.40, y:-homeprograms_height*.60}, {x:-homeprograms_width*.70, y:-homeprograms_height*.50}, {x:-homeprograms_width*.6, y:-homeprograms_height*.2}, {x:"0", y:"0"}], ease:Linear.easeNone},0);
+		tl_meetings.to($meetings, 5, {bezier:[{x:-homeprograms_width*.40, y:-homeprograms_height*.60}, {x:-homeprograms_width*.60, y:-homeprograms_height*.50}, {x:-homeprograms_width*.5, y:-homeprograms_height*.2}, {x:"0", y:"0"}], ease:Linear.easeNone},0);
 		tl_meetings.to($meetings, 1.25, {scaleX:1.5,scaleY:1.5, ease:Linear.easeNone},0);
 		tl_meetings.to($meetings, 2.5, {scaleX:0.75,scaleY:0.75, ease:Linear.easeNone, yoyo: true},1.25);
 		tl_meetings.to($meetings, 1.25, {scaleX:1,scaleY:1, ease:Linear.easeNone},3.75);

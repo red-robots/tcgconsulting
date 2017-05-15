@@ -1439,6 +1439,10 @@ footer.entry-meta {
 	display: block;
 	width: 100%;
 	position: relative;
+	margin-top: 20px;
+}
+.homeprograms >.row-2 .col:first-child {
+	margin-top: 0;
 }
 .homeprograms >.row-2 .col img {
 	width: 80%;
@@ -1450,7 +1454,7 @@ footer.entry-meta {
 }
 .homeprograms >.row-2 .col .copy {
 	color: white;
-	padding: 20px;
+	padding: 20px 20px 0 20px;
 	text-align: center;
 	font-size: 16px;
 }
@@ -2276,6 +2280,7 @@ right: 0;
 /* programs*/
 .homeprograms {
 	padding: 0;
+	text-align: center;
 }
 .homeprograms >.row-1 {
 	padding: 3% 0 6% 0;
@@ -2290,16 +2295,34 @@ right: 0;
 	font-size: 22px;
 }
 .homeprograms >.row-2 {
+	display: inline-block;
+	width: 97%;
+}
+.homeprograms >.row-2::after {
+	clear: both;
+	display: block;
+	content: "";
 }
 .homeprograms >.row-2 .col {
-	display: inline-block;
-	width: 11%;
+	display: block;
 	position: relative;
-	margin: 0 2.5% 0 0;
+	float: left;
+	margin: 0 3.5% 0 0;
 	opacity: 0;
+	vertical-align: top;
 }
-.homeprograms >.row-2 .col .management {
+.homeprograms >.row-2 .col.strategy {
+	width: 14.5%;
+}
+.homeprograms >.row-2 .col.integration, .homeprograms >.row-2 .col.air,
+.homeprograms >.row-2 .col.lodging, .homeprograms >.row-2 .col.meetings,
+.homeprograms >.row-2 .col.payment {
+	width: 10%;
+	margin-top: 2.5%;
+}
+.homeprograms >.row-2 .col.management {
 	margin-right: 0;
+	width: 14.5%;
 }
 .homeprograms >.row-2 .col img{
 	width: 100%;
@@ -2331,32 +2354,32 @@ right: 0;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	border: 1px solid white;
+	border-bottom: 1px solid white;
 	z-index: 1;
 }
 .homeprograms >.row-2 .col.strategy .connector{
-	left: 87%;
-	width: 68%;
+	left: 100%;
+	width: 24%;
 }
 .homeprograms >.row-2 .col.integration .connector{
-	left: 78%;
-	width: 71%;
+	left: 100%;
+	width: 35%;
 }
 .homeprograms >.row-2 .col.air .connector{
-	left: 76%;
-	width: 73%;
+	left: 100%;
+	width: 35%;
 }
 .homeprograms >.row-2 .col.lodging .connector{
-	left: 76%;
-	width: 73%;
+	left: 100%;
+	width: 35%;
 }
 .homeprograms >.row-2 .col.meetings .connector{
-	left: 76%;
-	width: 73%;
+	left: 100%;
+	width: 35%;
 }
 .homeprograms >.row-2 .col.payment .connector{
-	left: 72%;
-	width: 66%;
+	left: 100%;
+	width: 35%;
 }
 .homeprograms >.row-3 {
 	padding: 6% 0 15% 0;

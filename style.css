@@ -924,11 +924,9 @@ section[role="banner"] {
     width: 100%;
 }
 
-#colophon .col-1 .inner-wrapper h3 {
-    font-size: 18px;
-}
-#colophon .col-1 .inner-wrapper h3 span.big{
-    font-size: 25px;
+#colophon .col-1 .inner-wrapper img{
+    width: 50%;
+	margin: 0 auto;
 }
 #colophon .col-2 .phone {
     margin-top: 20px;
@@ -1467,6 +1465,10 @@ footer.entry-meta {
 	font-size: 20px;
 	margin-bottom: 20px;
 }
+.homeprograms >.row-3 .description sup {
+	font-size: 18px;   
+	top: -0.7em;
+}
 .homeprograms >.row-3 a{
 	font-size: 20px;
 	display: inline-block;
@@ -1527,6 +1529,7 @@ footer.entry-meta {
 .homefeed .col .outer-wrapper .inner-wrapper .feed-test a, .homefeed .col .outer-wrapper .inner-wrapper ul.items li a {
     text-decoration: none;
     cursor: pointer;
+	color: rgb(68,68,68);
 }
 
 input.top-search-field {
@@ -2230,7 +2233,7 @@ right: 0;
     .home .flexslider .banner-1 .inner-wrapper .text {
         position: absolute;
         width: 100%;
-        top: 30%;
+        top: 20%;
         left: 0;
         padding: 1% 30% 1% 5%;
         background-color: rgba(255,255,255,0.5);
@@ -2415,9 +2418,6 @@ right: 0;
         margin: 10px 0;
         height: calc(100% - 20px);
     }
-    .homefeed .col .outer-wrapper .inner-wrapper h2 {
-        font-size: 25px;
-    }
 #feeds {
 	width: auto;
 	display: inline-block;
@@ -2485,12 +2485,10 @@ right: 0;
         width: 20%;
         border-right: 2px solid white;
     }
-    #colophon .col-1 .inner-wrapper h3 {
-        font-size: 18px;
-    }
-    #colophon .col-1 .inner-wrapper h3 span.big{
-        font-size: 25px;
-    }
+	#colophon .col-1 .inner-wrapper img{
+		width: 90%;
+		margin: 0;
+	}
     #colophon .col-2 {
         width: 25%;
         align-items: flex-start;
@@ -2585,14 +2583,15 @@ right: 0;
     }
 	.main-navigation li.payment {
         font-size: 80%;
-        padding: 0 1%;
+        padding: 0;
         width: 14%;
     }
 }
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
+
 	.home .flexslider .slide .inner-wrapper {
-        padding-bottom: 35%;
+        padding-bottom: 23%;
     }
     .homefeed {
         justify-content: space-between;
@@ -2702,7 +2701,23 @@ right: 0;
 	.main-navigation li.payment {
         font-size: 90%;}
 }
+@media screen and (min-width: 1200px){
+    .home .flexslider .banner-1 .inner-wrapper .text {
+        top: 30%;
+    }
+    .home .flexslider .banner-2 .inner-wrapper .text{
+        bottom: 12%;
+    }
+    .homefeed .col .outer-wrapper .inner-wrapper h2 {
+        font-size: 15px;
+    }
+}
 
+@media screen and (min-width: 1500px){
+	.main-navigation li.payment {
+        padding: 0 1%;
+    }
+}
 
 /* =Print
 ----------------------------------------------- */

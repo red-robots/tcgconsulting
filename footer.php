@@ -13,12 +13,11 @@
 
 </div><!-- #page -->
 
-
 <footer id="colophon" class="wrapper">
 
     <div class="col col-1">
         <div class="inner-wrapper">
-            <h3><span class="big">TCG</span> Consulting</h3>
+            <img src="<?php echo get_template_directory_uri();?>/images/logo_footer.png" alt="logo footer">
         </div><!--.wrapper-->
     </div><!-- footer item col-1-->
 

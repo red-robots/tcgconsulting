@@ -431,7 +431,7 @@ a:hover {
 }
 
 /* Page structure */
-.home .wrapper, .home .site {
+.home .wrapper, .home .site, .page-template-page-enablers .wrapper, .page-template-page-enablers .site {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -803,6 +803,144 @@ section[role="banner"] {
 .widget-area #s {
 	width: 53.66666666666%; /* define a width to avoid dropping a wider submit button */
 }
+/* --------------------------strategic enablers-----------------------*/
+.template-enablers * {
+	box-sizing: border-box;
+}
+.template-enablers .banner-enablers {
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	height: auto;
+	color: white;
+}
+.template-enablers .banner-enablers >.row-1 {
+	padding: 20px;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1{
+	padding-bottom: 20px;
+	text-shadow: 2px 2px 10px darkgrey;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1 .number1{
+	font-size: 25px;
+	margin-right: 20px;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1 .number2{
+	font-size: 25px;
+	margin-left: 20px;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1 .vs{
+	font-size: 20px;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1 .percent{
+	font-size: 16px;
+}
+.template-enablers .banner-enablers >.row-1 >.row-2{
+	font-size: 16px;
+}
+.template-enablers .banner-enablers >.row-2{
+	background-color: rgba(33, 60, 110,0.8);
+	width: 100%;
+	padding: 16px;
+	text-align: left;
+}
+.template-enablers .banner-enablers >.row-2 h2 {
+	font-size: 20px;
+	margin-bottom: 25px;
+	font-weight: 500;
+}
+.template-enablers .banner-enablers >.row-2 p {
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+.template-enablers .banner-enablers >.row-2 ul {
+	font-size: 16px;
+	margin: 0 0 0 15px;
+	padding: 0;
+}
+.template-enablers .banner-enablers >.row-2 ul li {
+	margin: 0 0 20px 10px;
+	padding: 0;
+	list-style-type: disc;
+}
+.template-enablers .banner-enablers >.row-2 ul li:last-child {
+	margin-bottom: 0;
+}
+.template-enablers .copy {
+	padding: 3% 10% 1% 10%;
+}
+.template-enablers .copy h2 {
+	font-size: 20px;
+	margin-bottom: 25px;
+	font-weight: 500;
+}
+.template-enablers .copy .se-text {
+	font-size: 16px;
+	margin-bottom: 40px;
+}
+.template-enablers .copy .current-se {
+	margin: 30px 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-content: stretch;
+	align-content: stretch;
+	-webkit-align-items: stretch;
+  	align-items: stretch;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	
+}
+.template-enablers .copy .current-se .col-1 {
+	width: 100%;
+	margin-bottom: 20px;
+	-webkit-box-flex: 0 1 auto;
+	-moz-box-flex: 0 1 auto;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+}
+.template-enablers .copy .current-se .col-1 .se {
+	width: 100%;
+	padding: 0 10px;
+	float: left;
+}
+.template-enablers .copy .current-se .col-1 a {
+	display: block;
+}
+.template-enablers .copy .current-se .col-1 img {
+	width: 100%;
+}
+.template-enablers .copy .current-se .col-2 {
+	text-align: center;
+	width: 100%;
+	-webkit-box-flex: 0 1 auto;
+	-moz-box-flex: 0 1 auto;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+}
+.template-enablers .copy .current-se .col-2 a {
+	background-color: #213C6E;
+	color: white;
+	padding: 10px;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 20px;
+	box-shadow: 1px 1px 5px black;
+}
+.template-enablers .copy .disclaimer {
+	font-size: 14px;
+}
+.template-enablers .copy .disclaimer h2 {
+	font-size: 18px;
+}
+ 
 /* = Leadership
 -------------------------------------------------------------- */
 .leaderpost {
@@ -1908,6 +2046,130 @@ img#wpstats {
 }
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 600px) {
+	/* --------------------------strategic enablers-----------------------*/
+.template-enablers .banner-enablers >.row-1 {
+	padding: 5% 10% 7% 10%;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1{
+	padding-bottom: 2%;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1 .number1{
+	font-size: 60px;
+	margin-right: 20px;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1 .number2{
+	font-size: 60px;
+	margin-left: 20px;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1 .vs{
+	font-size: 35px;
+}
+.template-enablers .banner-enablers >.row-1 >.row-1 .percent{
+	font-size: 25px;
+}
+.template-enablers .banner-enablers >.row-1 >.row-2{
+	font-size: 18px;
+}
+.template-enablers .banner-enablers >.row-2{
+	background-color: rgba(33, 60, 110,0.8);
+	width: 100%;
+	padding: 2% 20% 2% 10%;
+	text-align: left;
+}
+.template-enablers .banner-enablers >.row-2 h2 {
+	font-size: 30px;
+	margin-bottom: 25px;
+	font-weight: 500;
+}
+.template-enablers .banner-enablers >.row-2 p {
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+.template-enablers .banner-enablers >.row-2 ul {
+	font-size: 16px;
+	margin: 0 0 0 15px;
+	padding: 0;
+}
+.template-enablers .banner-enablers >.row-2 ul li {
+	margin: 0 0 20px 10px;
+	padding: 0;
+	list-style-type: disc;
+}
+.template-enablers .banner-enablers >.row-2 ul li:last-child {
+	margin-bottom: 0;
+}
+.template-enablers .copy {
+	padding: 3% 10% 1% 10%;
+}
+.template-enablers .copy h2 {
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+.template-enablers .copy .se-text {
+	font-size: 16px;
+	margin-bottom: 40px;
+}
+.template-enablers .copy .current-se {
+	margin: 30px 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-content: flex-end;
+	align-content: flex-end;
+	-webkit-align-items: flex-end;
+  	align-items: flex-end;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	
+}
+.template-enablers .copy .current-se .col-1 {
+	width: 60%;
+	-webkit-box-flex: 0 1 auto;
+	-moz-box-flex: 0 1 auto;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	margin: 0;
+}
+.template-enablers .copy .current-se .col-1 .se {
+	width: 50%;
+	padding: 0 10px;
+}
+.template-enablers .copy .current-se .col-1 a {
+	display: block;
+}
+.template-enablers .copy .current-se .col-1 img {
+	width: 100%;
+}
+.template-enablers .copy .current-se .col-2 {
+	text-align: right;
+	width: 40%;
+	-webkit-box-flex: 0 1 auto;
+	-moz-box-flex: 0 1 auto;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+}
+.template-enablers .copy .current-se .col-2 a {
+	background-color: #213C6E;
+	color: white;
+	padding: 10px;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 20px;
+	margin-right: 10%;
+}
+.template-enablers .copy .disclaimer {
+	font-size: 14px;
+}
+.template-enablers .copy .disclaimer h2 {
+	font-size: 25px;
+}
 /* 		Header
 ___________________________________ */
 
@@ -2590,6 +2852,12 @@ right: 0;
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
 
+	.template-enablers .copy .current-se .col-1 {
+		width: 70%;
+	}
+	.template-enablers .copy .current-se .col-2 {
+		width: 30%;
+	}
 	.home .flexslider .slide .inner-wrapper {
         padding-bottom: 23%;
     }

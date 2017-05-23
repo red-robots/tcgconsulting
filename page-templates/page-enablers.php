@@ -33,7 +33,7 @@ get_header(); ?>
 					<div class="row-2">
 						<?php echo $row_2_text;?>
 					</div><!--.row-1-->
-				</div><!--.banner-->
+				</div><!--.banner-enablers-->
 			<?php endif;
 			$se_header_1 = get_field("se_header_1");
 			$se_text = get_field("se_text");
@@ -56,21 +56,23 @@ get_header(); ?>
 				<?php endif;?>
 				<?php if($current_se||($button_link&&$button_text)):?>
 					<div class="current-se">
-						<div class="col-1">
-							<?php foreach($current_se as $row):
-								if($row['image']):?>
-									<div class="se">
-										<?php if($row['link']):?>
-											<a href="<?php echo $row['link'];?>">
-										<?php endif;?>
-											<img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
-										<?php if($row['link']):?>
-											</a>
-										<?php endif;?>
-									</div><!--.se-->
-								<?php endif;
-							endforeach;?>
-						</div><!--.col-1-->
+						<?php if($current_se):?>
+							<div class="col-1">
+								<?php foreach($current_se as $row):
+									if($row['image']):?>
+										<div class="se">
+											<?php if($row['link']):?>
+												<a href="<?php echo $row['link'];?>">
+											<?php endif;?>
+												<img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
+											<?php if($row['link']):?>
+												</a>
+											<?php endif;?>
+										</div><!--.se-->
+									<?php endif;
+								endforeach;?>
+							</div><!--.col-1-->
+						<?php endif;?>
 						<?php if($button_link&&$button_text):?>
 							<div class="col-2">
 								<a href="<?php echo $button_link;?>"><?php echo $button_text;?></a>

@@ -5,6 +5,7 @@
  * Date: 4/28/17
  * Time: 2:03 PM
  */
+$our_clients_testimonial = get_field("our_clients_testimonial");
 $news_events_text   = get_field( "news_events_text" );
 $news_events_image  = get_field( "news_events_image" );
 $news_events_story_1 = get_field("news_events_story_1");
@@ -39,7 +40,7 @@ if($case_studies_story_2) $case_studies_posts[] = $case_studies_story_2; ?>
                         'posts_per_page' => 2,
                     ) );
                     if ( $wp_query->have_posts() ) : ?>
-                        <ul class="items">
+                        <ul class="items content">
                             <?php while ( $wp_query->have_posts() ) : ?>
                                 <?php $wp_query->the_post(); ?>
                                 <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -66,22 +67,14 @@ if($case_studies_story_2) $case_studies_posts[] = $case_studies_story_2; ?>
                 setup_postdata( $post );
                 $link = get_the_permalink( );
                 wp_reset_postdata();
-				$wp_query = new WP_Query();
-				$wp_query->query(array(
-					'post_type'=>'testimonial',
-					'posts_per_page' => 1,
-					'orderby' => 'rand'
-				));
-				if ( $wp_query->have_posts() ) : ?>
-                    <div class="feed-test">
-						<?php while ( $wp_query->have_posts() ) : ?>
-							<?php $wp_query->the_post(); ?>
+				if ( $our_clients_testimonial ) :            
+                    $post = get_post($our_clients_testimonial);
+    				setup_postdata( $post); ?>
+                    <div class="feed-test content">
                             <a href="<?php echo $link;?>"><?php the_field('testimonial'); ?></a>
-						<?php endwhile; ?>
                     </div><!--.items-->
 					<?php wp_reset_postdata();
 				endif; ?>
-
             </div><!--.inner-wrapper-->
         </div><!--.outer-wrapper-->
     </div><!--.col-2-->
@@ -102,7 +95,7 @@ if($case_studies_story_2) $case_studies_posts[] = $case_studies_story_2; ?>
                         'posts_per_page' => 2,
                     ) );
                     if ( $wp_query->have_posts() ) : ?>
-                        <ul class="items">
+                        <ul class="items content">
                             <?php while ( $wp_query->have_posts() ) : ?>
                                 <?php $wp_query->the_post(); ?>
                                 <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>

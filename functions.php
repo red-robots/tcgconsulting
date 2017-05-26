@@ -9,6 +9,10 @@
 require( get_template_directory() . '/functions-theme.php' );
 
  
+/*-------------------------------------
+	Adds Options page for ACF.
+---------------------------------------*/
+if( function_exists('acf_add_options_page') ) {acf_add_options_page();}
  
 function twentytwelve_setup() {
 

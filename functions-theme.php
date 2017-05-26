@@ -40,7 +40,7 @@
       get_bloginfo('template_directory') . '/js/images-loaded.js',
       array('jquery') , '1.0' , true );
     wp_enqueue_script('images-loaded');
-
+  
     wp_register_script(
       'gsap',
       'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js',

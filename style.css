@@ -3302,7 +3302,7 @@ right: 0;
         margin-top: 10px;
     }
     #colophon .col-3 .inner-wrapper .link a {
-        font-size: 20px;
+        font-size: 14px;
         text-decoration: none;
         color: white;
         font-weight: 700;
@@ -3323,7 +3323,6 @@ right: 0;
     #colophon .col-4 .inner-wrapper ul li {
         display: inline-block;
         font-size: 35px;
-        font-size: 3.5vw;
         margin-left: 5%;
     }
     #colophon .col-4 .inner-wrapper ul li:first-child {
@@ -3525,6 +3524,10 @@ right: 0;
 
 	.main-navigation li a {
 		font-size: 16px;
+	}
+
+	#colophon .col-3 .inner-wrapper .link a {
+		font-size: 20px;
 	}
 /*.main-navigation ul {
 		margin: 0;

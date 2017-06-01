@@ -71,7 +71,12 @@ if($case_studies_story_2) $case_studies_posts[] = $case_studies_story_2; ?>
                     $post = get_post($our_clients_testimonial);
     				setup_postdata( $post); ?>
                     <div class="feed-test content">
-                            <a href="<?php echo $link;?>"><?php the_field('testimonial'); ?></a>
+                            <a href="<?php echo $link;?>">
+                                <?php the_field('testimonial'); ?>
+                                <div class="testi-cite">
+                                    - <?php the_field('testimonial_credits'); ?>
+                                </div><!-- testi cite -->
+                            </a>
                     </div><!--.items-->
 					<?php wp_reset_postdata();
 				endif; ?>

@@ -1798,7 +1798,6 @@ footer.entry-meta {
 }
 .home .flexslider .banner-3 .inner-wrapper .row-1, .home .flexslider .banner-3 .inner-wrapper .row-2 {
 	margin-bottom: 20px;
-	text-shadow: 2px 2px 5px black;
 }
 .home .flexslider .banner-3 .inner-wrapper .row-1, .home .flexslider .banner-3 .inner-wrapper .row-2, .home .flexslider .banner-3 .inner-wrapper .row-3 {
     font-size: 20px;
@@ -2317,6 +2316,9 @@ img#wpstats {
 }
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 600px) {
+.home .flexslider .banner-3 .inner-wrapper .row-1, .home .flexslider .banner-3 .inner-wrapper .row-2 {
+	text-shadow: 2px 2px 5px black;
+}
 	/* ----------------------- tco tmpe ------------------------------------*/
 .template-tco >.row-3 {
 	padding: 3% 10% 2% 10%;
@@ -3029,7 +3031,7 @@ right: 0;
 	position: absolute;
 	box-shadow: 2px 2px 5px black;
 	width: 200px;
-	top: 10%;
+	top: 30%;
 	z-index: 2;
 	background-color: white;
 	padding: 20px;
@@ -3381,9 +3383,6 @@ right: 0;
 }
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
-#map .rollover.copy {
-	top: 30%;
-}
 .template-tco >.row-5 .row-5-cols >.col-1 ul li ul li {
 	list-style-type: disc;
 	width: 40%;
@@ -3590,6 +3589,9 @@ right: 0;
 }
 @media screen and (min-width: 1200px){
 
+	#map .rollover.copy {
+		top: 40%;
+	}
     .home .flexslider .banner-3 .inner-wrapper .row-1{
 		font-size: 60px;
 		top: 5%;

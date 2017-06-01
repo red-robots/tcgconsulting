@@ -39,11 +39,31 @@ jQuery(document).ready(function ($) {
 	$('#map area.rollover').hover(function(){
 		var $this = $(this);
 		var target_class = $this.data('type');
-		$('#map .rollover.'+target_class).addClass("active");
+		var $target = $('#map .rollover.'+target_class);
+		if($target.attr('data-timeout')!==undefined){
+			clearTimeout(Number($target.attr('data-timeout')));
+		}
+		$target.addClass("active");
 	}, function(){
 		var $this = $(this);
 		var target_class = $this.data('type');
-		$('#map .rollover.'+target_class).removeClass("active");
+		var $target = $('#map .rollover.'+target_class);
+		var timeout = setTimeout(function(){
+			$target.removeClass("active");
+		},300);
+		$target.attr('data-timeout',timeout);
+	});
+	$('#map .rollover.copy').hover(function(){
+		var $this = $(this);
+		if($this.attr('data-timeout')!==undefined){
+			clearTimeout(Number($this.attr('data-timeout')));
+		}
+	}, function(){
+		var $this = $(this);
+		var timeout = setTimeout(function(){
+			$this.removeClass("active");
+		},300);
+		$this.attr('data-timeout',timeout);
 	});
 	/*animationComplete = false;
 	function makeVisible(){

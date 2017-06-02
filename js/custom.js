@@ -254,7 +254,7 @@ jQuery(document).ready(function ($) {
 				top: ($content.height()*-1-20)+"px"
 			},200, function(){
 				$this.css({
-					boxShadow: "0px 1px 5px 2px black"
+					boxShadow: "0px 1px 5px 2px darkgrey"
 				});
 			});
 		}

@@ -307,22 +307,35 @@ jQuery(document).ready(function ($) {
 			}
  		 });
 	});
-
+	setTimeout(function(){
+		$('.home .flexslider').imagesLoaded(function(){
+			$('.home .flexslider').flexslider({
+				animation: "slide",
+				smoothHeight: true,
+				slideshowSpeed: 5000,
+				start: function(){
+			//		checkProgramAnimationStart();
+				}
+			}); // end register flexslider
+		});
+	},17000);
     /*
      *
      *	Flexslider
      *
      ------------------------------------*/
-    $('.flexslider').imagesLoaded(function(){
-		$('.flexslider').flexslider({
-			animation: "slide",
-			smoothHeight: true,
-			slideshowSpeed: 5000,
-			start: function(){
-		//		checkProgramAnimationStart();
-			}
-		}); // end register flexslider
-	});
+    if($('body.home').length === 0){
+		$('.flexslider').imagesLoaded(function(){
+			$('.flexslider').flexslider({
+				animation: "slide",
+				smoothHeight: true,
+				slideshowSpeed: 5000,
+				start: function(){
+			//		checkProgramAnimationStart();
+				}
+			}); // end register flexslider
+		});
+	}
 
 
 // Equal heights divs

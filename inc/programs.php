@@ -26,6 +26,7 @@ $management_image = get_field("programs_management_image");?>
 $enablers_link = get_post(3249);?>
 <div class="homeprograms-video">
     <div id="map">
+        <img class="final" src="<?php echo get_template_directory_uri();?>/images/last-frame.png" alt="last frame of video">
         <video autoplay>
             <source src="<?php echo get_template_directory_uri();?>/videos/Comp10.mov">
             Your browser does not support html5 video

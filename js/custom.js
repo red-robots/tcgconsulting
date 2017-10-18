@@ -30,41 +30,45 @@ jQuery(document).ready(function ($) {
         }
         scale();
         $(window).on('resize',scale);
-		
+		function activateMap(){
+			$('#map img.map').css("display","block");
+		}
+		if (document.cookie.indexOf('visited=true') == -1) {
+			setTimeout(activateMap,14000);
+		} else {
+			activateMap();
+		}
+		$('#map area.rollover').hover(function(){
+			var $this = $(this);
+			var target_class = $this.data('type');
+			var $target = $('#map .rollover.'+target_class);
+			if($target.attr('data-timeout')!==undefined){
+				clearTimeout(Number($target.attr('data-timeout')));
+			}
+			$target.addClass("active");
+		}, function(){
+			var $this = $(this);
+			var target_class = $this.data('type');
+			var $target = $('#map .rollover.'+target_class);
+			var timeout = setTimeout(function(){
+				$target.removeClass("active");
+			},300);
+			$target.attr('data-timeout',timeout);
+		});
+		$('#map .rollover.copy').hover(function(){
+			var $this = $(this);
+			if($this.attr('data-timeout')!==undefined){
+				clearTimeout(Number($this.attr('data-timeout')));
+			}
+		}, function(){
+			var $this = $(this);
+			var timeout = setTimeout(function(){
+				$this.removeClass("active");
+			},300);
+			$this.attr('data-timeout',timeout);
+		});
     });
-	function activateMap(){
-		$('#map img.map').css("display","block");
-	}
-	setTimeout(activateMap,14000);
-	$('#map area.rollover').hover(function(){
-		var $this = $(this);
-		var target_class = $this.data('type');
-		var $target = $('#map .rollover.'+target_class);
-		if($target.attr('data-timeout')!==undefined){
-			clearTimeout(Number($target.attr('data-timeout')));
-		}
-		$target.addClass("active");
-	}, function(){
-		var $this = $(this);
-		var target_class = $this.data('type');
-		var $target = $('#map .rollover.'+target_class);
-		var timeout = setTimeout(function(){
-			$target.removeClass("active");
-		},300);
-		$target.attr('data-timeout',timeout);
-	});
-	$('#map .rollover.copy').hover(function(){
-		var $this = $(this);
-		if($this.attr('data-timeout')!==undefined){
-			clearTimeout(Number($this.attr('data-timeout')));
-		}
-	}, function(){
-		var $this = $(this);
-		var timeout = setTimeout(function(){
-			$this.removeClass("active");
-		},300);
-		$this.attr('data-timeout',timeout);
-	});
+	
 	/*animationComplete = false;
 	function makeVisible(){
 		$('.home .homeprograms >.row-3,.home .homeprograms >.row-1,.home .homeprograms >.row-2 >.col')
@@ -307,26 +311,24 @@ jQuery(document).ready(function ($) {
 			}
  		 });
 	});
-	setTimeout(function(){
+	if (document.cookie.indexOf('visited=true') == -1) {
+		$(window).load(function(){
+			setTimeout(function(){
+				$('.home .flexslider').imagesLoaded(function(){
+					$('.home .flexslider').flexslider({
+						animation: "slide",
+						smoothHeight: true,
+						slideshowSpeed: 5000,
+						start: function(){
+					//		checkProgramAnimationStart();
+						}
+					}); // end register flexslider
+				});
+			},17000);
+		});
+	} else {
 		$('.home .flexslider').imagesLoaded(function(){
 			$('.home .flexslider').flexslider({
-				animation: "slide",
-				smoothHeight: true,
-				slideshowSpeed: 5000,
-				start: function(){
-			//		checkProgramAnimationStart();
-				}
-			}); // end register flexslider
-		});
-	},17000);
-    /*
-     *
-     *	Flexslider
-     *
-     ------------------------------------*/
-    if($('body.home').length === 0){
-		$('.flexslider').imagesLoaded(function(){
-			$('.flexslider').flexslider({
 				animation: "slide",
 				smoothHeight: true,
 				slideshowSpeed: 5000,
@@ -396,6 +398,16 @@ $(function() {
     }
 });
 
-
+$(window).load(function(){
+	var $final_frame = $('.homeprograms-video img.final').hide();
+	if (document.cookie.indexOf('visited=true') == -1) {
+		var fifteenDays = 1000*60*60*24*15;
+		var expires = new Date((new Date()).valueOf() + fifteenDays);
+		document.cookie = "visited=true;expires=" + expires.toUTCString();
+	} else {
+		$('.homeprograms-video video').hide();
+		$final_frame.show();
+	}
+});
 
 });// END #####################################    END

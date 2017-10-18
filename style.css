@@ -3020,6 +3020,9 @@ right: 0;
 .homeprograms-video {
 	display: block;
 }
+.homeprograms-video img.final {
+	width: 100%;
+}
 #map {
 	position: relative;
 }

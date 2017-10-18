@@ -398,16 +398,19 @@ $(function() {
     }
 });
 
-$(window).load(function(){
+if($('body.home').length>0){
 	var $final_frame = $('.homeprograms-video img.final').hide();
+	if (document.cookie.indexOf('visited=true') != -1) {
+		$('.homeprograms-video video').hide();
+		$final_frame.show();
+	}
+}
+$(window).load(function(){
 	if (document.cookie.indexOf('visited=true') == -1) {
 		var fifteenDays = 1000*60*60*24*15;
 		var expires = new Date((new Date()).valueOf() + fifteenDays);
 		document.cookie = "visited=true;expires=" + expires.toUTCString();
-	} else {
-		$('.homeprograms-video video').hide();
-		$final_frame.show();
-	}
+	} 
 });
 
 });// END #####################################    END

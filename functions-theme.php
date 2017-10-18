@@ -11,7 +11,7 @@
 		wp_register_script(
 			'custom',
 			get_bloginfo('template_directory') . '/js/custom.js',
-			array('gsap','jquery','flexslider','blocks','isotope','images-loaded'), '1.0' , true );
+			array('gsap','jquery','flexslider','blocks','isotope','images-loaded'), '2.1' , true );
 		wp_enqueue_script('custom');
 		
 		

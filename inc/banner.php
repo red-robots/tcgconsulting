@@ -32,6 +32,10 @@ if ( $wp_query->have_posts() ) : ?>
                 <li class="banner-2 slide" style="background-image:url(<?php echo $banner_2_image['url']; ?>);">
                     <div class="inner-wrapper">
                         <img src="<?php echo $banner_2_image['url']; ?>" alt="<?php $banner_2_image['alt']; ?>">
+                        <div class="awards">
+                            <img src="<?php echo get_template_directory_uri()."/images/award-1.png" ?>" alt="Fast 50 Award">
+                            <img src="<?php echo get_template_directory_uri()."/images/award-2.png" ?>" alt="Inc. 5000 Award">
+                        </div><!--.logos-->
 						<?php if ( $banner_2_text ): ?>
                             <div class="text">
 								<?php echo $banner_2_text; ?>

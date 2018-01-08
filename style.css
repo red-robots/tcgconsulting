@@ -1060,6 +1060,9 @@ section[role="banner"] {
 	text-align: left;
 	line-height: 1.2;
 }
+.template-enablers .banner-enablers >.row-2 img, .template-tco .banner-tco >.row-2 img {
+	max-width: 100%;
+}
 .template-enablers .banner-enablers >.row-2 p:last-child , .template-tco .banner-tco >.row-2 p:last-child {
 	margin-bottom: 0;
 }
@@ -1760,9 +1763,12 @@ footer.entry-meta {
 }
 .home .flexslider .slide .inner-wrapper{
 }
-.home .flexslider .slide .inner-wrapper img {
+.home .flexslider .slide .inner-wrapper > img {
     display: block;
     width: 100%;
+}
+.home .flexslider .slide .inner-wrapper img {
+	max-width: 100%;
 }
 .home .flexslider .banner-1 .inner-wrapper .text {
     font-size: 20px;
@@ -2489,6 +2495,9 @@ img#wpstats {
 	padding: 2% 20% 2% 10%;
 	text-align: left;
 }
+.template-enablers .banner-enablers >.row-2 img, .template-tco .banner-tco >.row-2 img {
+	width: 35%;
+}
 .template-enablers .banner-enablers >.row-2 h2, .template-tco .banner-tco >.row-2 h2 {
 	font-size: 30px;
 	margin-bottom: 25px;
@@ -2907,9 +2916,12 @@ right: 0;
         position: relative;
         padding-bottom:70%;
     }
-    .home .flexslider .slide .inner-wrapper img {
+    .home .flexslider .slide .inner-wrapper > img {
         display: none;
     }
+	.home .flexslider .slide .inner-wrapper img {
+		width: 35%;
+	}
     .home .flexslider .banner-1 .inner-wrapper .text {
         position: absolute;
         width: 100%;
@@ -2930,6 +2942,16 @@ right: 0;
 		font-size: 25px;
 		line-height: 1.5;
     }
+    .home .flexslider .banner-2 .inner-wrapper .awards{
+        position: absolute;
+        width: 40%;
+        top: 5%;
+        right: 5%;
+    }
+    .home .flexslider .banner-2 .inner-wrapper .awards img {
+		width: 100%;
+		display: block;
+	}
 
     .home .flexslider .banner-3 .inner-wrapper .row-1{
         position: absolute;
@@ -3386,6 +3408,9 @@ right: 0;
 }
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
+.home .flexslider .banner-2 .inner-wrapper .awards{
+	width: 20%;
+}
 .template-tco >.row-5 .row-5-cols >.col-1 ul li ul li {
 	list-style-type: disc;
 	width: 40%;

@@ -33,9 +33,9 @@ if ( $wp_query->have_posts() ) : ?>
                     <div class="inner-wrapper">
                         <img src="<?php echo $banner_2_image['url']; ?>" alt="<?php $banner_2_image['alt']; ?>">
                         <div class="text">
-                            <img src="<?php echo get_template_directory_uri()."/images/award-1.png" ?>" alt="Fast 50 Award">
-                            <img src="<?php echo get_template_directory_uri()."/images/award-2.png" ?>" alt="Inc. 5000 Award">
-                            <img src="<?php echo get_template_directory_uri()."/images/award-3.png" ?>" alt="Inc. 5000 Award">
+                            <img src="<?php echo get_template_directory_uri()."/images/award-1.png" ?>" alt="Inc. 5000 Award">
+                            <img src="<?php echo get_template_directory_uri()."/images/award-2.png" ?>" alt="Fast 50 Award">
+                            <img src="<?php echo get_template_directory_uri()."/images/award-3.png" ?>" alt="Fastest Growing Firms Award">
                         </div><!--.text-->
                     </div><!--.inner-wrapper-->
                 </li>

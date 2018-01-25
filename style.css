@@ -2501,14 +2501,14 @@ img#wpstats {
 .template-enablers .banner-enablers >.row-2, .template-tco .banner-tco >.row-2 {
 	background-color: rgba(33, 60, 110,0.8);
 	width: 100%;
-	padding: 2% 10%;
+	padding: 5px 10% 2% 10%;
 	text-align: left;
 }
 .template-tco .banner-tco >.row-2 {
 	text-align: center;
 }
 .template-enablers .banner-enablers >.row-2 img, .template-tco .banner-tco >.row-2 img {
-	width: 60%;
+	width: 50%;
 	display: inline-block;
 	margin: 0 0 20px 0;
 }

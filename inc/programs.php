@@ -2,7 +2,6 @@
 /*
 *
 */
-$programs_description = get_field("programs_description");
 $programs_link = get_field("programs_link");
 $programs_link_text = get_field("programs_link_text");
 $programs_title = get_field("programs_title");
@@ -26,9 +25,9 @@ $management_image = get_field("programs_management_image");?>
 $enablers_link = get_post(3249);?>
 <div class="homeprograms-video">
     <div id="map">
-        <img class="final" src="<?php echo get_template_directory_uri();?>/images/last-frame.png" alt="last frame of video">
+        <img class="final" src="<?php echo get_template_directory_uri();?>/images/video-frame.png" alt="last frame of video">
         <video autoplay>
-            <source src="<?php echo get_template_directory_uri();?>/videos/Comp10.mov">
+            <source src="<?php echo get_template_directory_uri();?>/videos/Comp15.mov">
             Your browser does not support html5 video
         </video>
         <img src="<?php echo get_template_directory_uri(); ?>/images/blank.png" alt=""
@@ -77,10 +76,10 @@ $enablers_link = get_post(3249);?>
                 <area shape="circle" coords="1025,455,60" class="rollover" data-type="payment">
                 <area shape="circle" coords="1210,455,100" class="rollover " data-type="management">
             <?php if($tco_link):?>
-                <area shape="circle" coords="650,200,100" href="<?php echo get_the_permalink($tco_link);?>">
+                <area shape="circle" coords="650,300,100" href="<?php echo get_the_permalink($tco_link);?>">
             <?php endif;
             if($enablers_link):?>
-                <area shape="circle" coords="850,200,100" href="<?php echo get_the_permalink($enablers_link);?>">
+                <area shape="circle" coords="850,300,100" href="<?php echo get_the_permalink($enablers_link);?>">
             <?php endif;?>
         </map>
     </div><!-- map -->
@@ -88,23 +87,17 @@ $enablers_link = get_post(3249);?>
 <div class="homeprograms" <?php if($background_image):
     echo 'style="background-image: url('.$background_image['url'].');"';
     endif;?>>
-    <?php if($programs_description|| ($programs_link&&$programs_link_text)):?>
-        <div class="row-1">
-            <?php if($programs_description):?>
-                <div class="description">
-                    <?php echo $programs_description;?>
-                </div><!--.description-->
-                <?php if($tco_link && $enablers_link):?>
-                    <a href="<?php echo get_the_permalink($tco_link);?>">
-                        TCO-TMPE<sup>SM</sup>
-                    </a>
-                    <a href="<?php echo get_the_permalink($enablers_link);?>">
-                        Strategic Enablers
-                    </a>
-                <?php endif;?>
-            <?php endif;?>
-        </div><!--.row-1-->
-    <?php endif;?>
+    <div class="row-1">
+        <img src="<?php echo get_template_directory_uri();?>/images/tco-logo-2-new.png" alt="TCO TMPE Logo">
+        <?php if($tco_link && $enablers_link):?>
+            <a href="<?php echo get_the_permalink($tco_link);?>">
+                TCO-TMPE<sup>SM</sup>
+            </a>
+            <a href="<?php echo get_the_permalink($enablers_link);?>">
+                Strategic Enablers
+            </a>
+        <?php endif;?>
+    </div><!--.row-1-->
     <div class="row-2">
         <?php if($strategy_image):?>
             <div class="strategy col">
